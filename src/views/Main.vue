@@ -1,12 +1,12 @@
 <script setup>
-// import Cart from '../components/Cart.vue'
+import Card from '../components/Card.vue'
 import {onMounted, ref } from "vue";
 
 
 let data = ref([])
 
 async function getData() {
-    let response = await fetch("https://2d67a15116fee664.mokky.dev/product")
+    let response = await fetch("https://e0d49d85686653a2.mokky.dev/produckt")
     data.value = await response.json()
 }
 
@@ -15,13 +15,18 @@ onMounted(() => {
 })
 
 </script>
+
 <template>
     <section>
-        {{data}}
-        <!-- <Cart v-for="(item, index) in data" :key="index" :item="item"/> -->
+        <Card v-for="(item, index) in data" :key="index" :item="item"/>
     </section>
 </template>
 
 <style scoped>
-
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    gap: 50px;
+    margin: 50px;
+}
 </style>

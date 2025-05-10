@@ -6,11 +6,27 @@ defineProps({
 
 <template>
     <a>
-        {{ item }}
         <img :src="item.img" alt=""/>
-        <h1>{{ item.title }}</h1>
-        <p>{{ item.desc }}</p>
-        <h2>{{item.price}}</h2>
-        <h3>{{item.info}}</h3>
+        <p>Название: {{item.name}}</p>
+        <p>Цена: {{item.price}}</p> 
+        <p>Гигобайты: {{item.Gb}}</p>
+        <p>Тип памяти: {{item.DDR}}</p>
+        <p>Биты: {{item.Bit}}</p>
+        <p>Гпу: {{item.GPU}}</p>
     </a>
 </template>
+<style scoped>
+    a{
+        background: rgb(246, 195, 195);
+        width: 100%;
+    }
+    img{
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
+    p{
+        font-size: 35px;
+        padding: 5px;
+    }
+</style>
