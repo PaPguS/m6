@@ -5,20 +5,21 @@ defineProps({
 </script> 
 
 <template>
-    <a>
+    <router-link :to="{name: 'detail', params: {id: item.id} }">
         <img :src="item.img" alt=""/>
         <p>Название: {{item.name}}</p>
-        <p>Цена: {{item.price}}</p> 
+        <!-- <p>Цена: {{item.price}}</p> 
         <p>Гигобайты: {{item.Gb}}</p>
         <p>Тип памяти: {{item.DDR}}</p>
         <p>Биты: {{item.Bit}}</p>
-        <p>Гпу: {{item.GPU}}</p>
-    </a>
+        <p>Гпу: {{item.GPU}}</p> -->
+    </router-link>
 </template>
 <style scoped>
     a{
         background: rgb(246, 195, 195);
         width: 100%;
+        text-decoration: none;
     }
     img{
         width: 100%;
