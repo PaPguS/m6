@@ -5,6 +5,7 @@
     <header>
         <router-link to="/">Главная</router-link>
         <router-link to="/faq">Вопросы</router-link>
+        <router-link to='/admin'>Aдмин</router-link>
     </header>
 </template>
 
@@ -16,7 +17,8 @@ header{
     justify-content: space-between;
     padding: 20px;
 }
+
 .router-link-active {
-    color: rgb(110, 102, 102);
+    color: blue;
 }
 </style>
